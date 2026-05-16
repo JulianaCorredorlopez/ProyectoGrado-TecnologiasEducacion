@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+}
+
+.ar-grid {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.title-glow {
+  text-shadow:
+    0 0 18px rgba(34, 211, 238, 0.55),
+    0 0 42px rgba(139, 92, 246, 0.35);
+}

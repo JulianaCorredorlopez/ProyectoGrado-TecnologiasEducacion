@@ -79,7 +79,7 @@ export const eventsByYear = {
     {
       id: "2022-1", type: "Investigación", title: "Inicio del semillero TECSI", date: "2022",
       description: "Formación oficial del semillero de investigación, definiendo las líneas de trabajo en tecnología educativa, RA e IA.",
-      highlights: ["Semillero fundado", "Líneas de investigación", "Primer equipo"],
+      highlights: ["Líneas de investigación", "Primer equipo"],
       image: null, media: [],
     },
     {

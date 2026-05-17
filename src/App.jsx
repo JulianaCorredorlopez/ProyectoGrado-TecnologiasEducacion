@@ -3,6 +3,7 @@ import Timeline from "./components/Timeline";
 import ImpactMap from "./components/ImpactMap";
 import Charts from "./components/Charts";
 import WorkCarousel from "./components/WorkCarousel";
+import Header from "./components/Header";
 import { kpis } from "./data/portfolioData";
 import { SectionTitle, StatCard } from "./components/ui";
 
@@ -15,6 +16,7 @@ export default function App() {
         <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-pink-500 blur-3xl" />
       </div>
 
+      <Header />
       <Hero />
 
       <section className="relative mx-auto max-w-7xl px-6 py-10">

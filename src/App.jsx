@@ -17,7 +17,7 @@ export default function App() {
       </div>
 
       <Header />
-      <main className="pt-14">
+      <main className="pt-13">
         <Hero />
         <Timeline />
         <section className="relative mx-auto max-w-7xl px-6 py-10">

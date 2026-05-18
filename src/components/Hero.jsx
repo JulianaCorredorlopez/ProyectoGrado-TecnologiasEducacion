@@ -3,9 +3,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Icons } from "./Icons";
 import { Badge, Button, Card, CardContent } from "./ui";
+import ARModal from "./ARModal";
 
 export default function Hero() {
   const [scanActive, setScanActive] = useState(false);
+  const [arOpen, setArOpen] = useState(false); // ← 1. estado que faltaba
 
   return (
     <section className="ar-grid relative mx-auto min-h-screen max-w-7xl overflow-hidden px-6 py-10 lg:py-16">
@@ -25,10 +27,6 @@ export default function Hero() {
           <h1 className="title-glow max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-6xl">
             TECSI: tecnología, investigación y educación
           </h1>
-
-          {/*<p className="mt-5 max-w-2xl text-lg text-slate-300">
-            Una página tipo presentación interactiva para que el público escanee un QR y recorra desde su celular los años de capacitaciones, ponencias, proyectos e investigación.
-          </p>*/}
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#recorrido">
@@ -67,7 +65,8 @@ export default function Hero() {
                   whileHover={{ scale: 1.08, rotate: 2 }}
                   onHoverStart={() => setScanActive(true)}
                   onHoverEnd={() => setScanActive(false)}
-                  onTap={() => setScanActive((v) => !v)}
+                  onTap={() => setArOpen(true)}
+                  onClick={() => setArOpen(true)}
                   className="rounded-3xl border border-white/20 bg-white/10 p-7 text-center backdrop-blur-md"
                 >
                   <img
@@ -81,6 +80,13 @@ export default function Hero() {
           </CardContent>
         </Card>
       </div>
+
+      {/* 2. ARModal fuera del Card, al final del section */}
+      <ARModal
+        isOpen={arOpen}
+        onClose={() => setArOpen(false)}
+        modelUrl="/models/avatarJulis.fbx"
+      />
     </section>
   );
 }

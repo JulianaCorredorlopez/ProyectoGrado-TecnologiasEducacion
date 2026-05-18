@@ -272,12 +272,7 @@ export const eventsByCategory = {
         { type: "image", src: null, caption: "Interfaz gamificación" },
       ],
     },
-    {
-      id: "prod-3", type: "Producto", title: "Portafolio interactivo TECSI", date: "2026",
-      description: "Desarrollo del portafolio interactivo del semillero: una experiencia web accesible por QR que recoge toda la trayectoria investigativa.",
-      highlights: ["Portafolio web", "QR interactivo", "Legado del semillero"],
-      image: null, media: [],
-    },
+    
   ],
 };
 

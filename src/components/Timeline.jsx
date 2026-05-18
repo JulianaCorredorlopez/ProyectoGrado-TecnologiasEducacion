@@ -1,28 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { eventsByCategory } from "../data/portfolioData";
+import Charts from "./Charts";
 
 // ─── Colores por tipo de evento ────────────────────────────────────
 const typeConfig = {
-  "Póster":        { color: "#29ABE2", bg: "rgba(41,171,226,0.12)",  icon: "🖼️"  },
-  "Capacitación":  { color: "#39B54A", bg: "rgba(57,181,74,0.12)",   icon: "🎓"  },
-  "Ponencia":      { color: "#F7931E", bg: "rgba(247,147,30,0.12)",  icon: "🎤"  },
-  "Investigación": { color: "#BE63F9", bg: "rgba(190,99,249,0.12)",  icon: "🔬"  },
-  "Codirección":   { color: "#F9A63A", bg: "rgba(249,166,58,0.12)",  icon: "🎓"  },
-  "Taller":        { color: "#FF6B6B", bg: "rgba(255,107,107,0.12)", icon: "🛠️"  },
-  "Participación": { color: "#4ECDC4", bg: "rgba(78,205,196,0.12)",  icon: "🙋"  },
-  "Producto":      { color: "#F7931E", bg: "rgba(247,147,30,0.12)",  icon: "📱"  },
+  "Póster": { color: "#29ABE2", bg: "rgba(41,171,226,0.12)", icon: "🖼️" },
+  "Capacitación": { color: "#39B54A", bg: "rgba(57,181,74,0.12)", icon: "🎓" },
+  "Ponencia": { color: "#F7931E", bg: "rgba(247,147,30,0.12)", icon: "🎤" },
+  "Investigación": { color: "#BE63F9", bg: "rgba(190,99,249,0.12)", icon: "🔬" },
+  "Codirección": { color: "#F9A63A", bg: "rgba(249,166,58,0.12)", icon: "🎓" },
+  "Taller": { color: "#FF6B6B", bg: "rgba(255,107,107,0.12)", icon: "🛠️" },
+  "Participación": { color: "#4ECDC4", bg: "rgba(78,205,196,0.12)", icon: "🙋" },
+  "Producto": { color: "#F7931E", bg: "rgba(247,147,30,0.12)", icon: "📱" },
 };
 
 // ─── Colores por categoría (encabezado de tarjeta) ─────────────────
 const categoryConfig = {
-  "Póster":                    { color: "#29ABE2", bg: "rgba(41,171,226,0.12)",  icon: "🖼️",  label: "Póster"                    },
-  "Capacitaciones":            { color: "#39B54A", bg: "rgba(57,181,74,0.12)",   icon: "🎓",  label: "Capacitaciones"            },
-  "Participaciones / Ponencias":{ color: "#F7931E", bg: "rgba(247,147,30,0.12)", icon: "🎤",  label: "Participaciones / Ponencias"},
-  "Investigaciones":           { color: "#BE63F9", bg: "rgba(190,99,249,0.12)",  icon: "🔬",  label: "Investigaciones"           },
-  "Codirección":               { color: "#F9A63A", bg: "rgba(249,166,58,0.12)",  icon: "📋",  label: "Codirección"               },
-  "Talleres":                  { color: "#FF6B6B", bg: "rgba(255,107,107,0.12)", icon: "🛠️",  label: "Talleres"                  },
-  "Participaciones":           { color: "#4ECDC4", bg: "rgba(78,205,196,0.12)",  icon: "🙋",  label: "Participaciones"           },
-  "Productos":                 { color: "#F7931E", bg: "rgba(247,147,30,0.12)",  icon: "📱",  label: "Productos"                 },
+  "Póster": { color: "#29ABE2", bg: "rgba(41,171,226,0.12)", icon: "🖼️", label: "Póster" },
+  "Capacitaciones": { color: "#39B54A", bg: "rgba(57,181,74,0.12)", icon: "🎓", label: "Capacitaciones" },
+  "Participaciones / Ponencias": { color: "#F7931E", bg: "rgba(247,147,30,0.12)", icon: "🎤", label: "Participaciones / Ponencias" },
+  "Investigaciones": { color: "#BE63F9", bg: "rgba(190,99,249,0.12)", icon: "🔬", label: "Investigaciones" },
+  "Codirección": { color: "#F9A63A", bg: "rgba(249,166,58,0.12)", icon: "📋", label: "Codirección" },
+  "Talleres": { color: "#FF6B6B", bg: "rgba(255,107,107,0.12)", icon: "🛠️", label: "Talleres" },
+  "Participaciones": { color: "#4ECDC4", bg: "rgba(78,205,196,0.12)", icon: "🙋", label: "Participaciones" },
+  "Productos": { color: "#F7931E", bg: "rgba(247,147,30,0.12)", icon: "📱", label: "Productos" },
 };
 
 // ─── Hook de animación por scroll ─────────────────────────────────
@@ -420,15 +421,17 @@ export default function Timeline() {
       </div>
 
       {Object.entries(eventsByCategory).map(([categoryName, events], index) => (
-        <CategoryCard
-          key={categoryName}
-          categoryName={categoryName}
-          events={events}
-          index={index}
-          onEventClick={setSelectedEvent}
-        />
+        <>
+          <CategoryCard
+            key={categoryName}
+            categoryName={categoryName}
+            events={events}
+            index={index}
+            onEventClick={setSelectedEvent}
+          />
+          {categoryName === "Capacitaciones" && <Charts />}
+        </>
       ))}
-
     </section>
   );
 }

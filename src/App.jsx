@@ -31,7 +31,7 @@ export default function App() {
             ))}
           </div>
         </section>
-        <Charts />
+    
 
         <section className="relative mx-auto max-w-7xl px-6 py-16">
           <SectionTitle eyebrow="Metodología" title="Cómo se desarrolló el trabajo">

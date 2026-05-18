@@ -61,6 +61,8 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
 
             if (cancelled || !mountRef.current) return;
 
+            await new Promise((r) => setTimeout(r, 100)); // espera que el modal renderice
+            if (cancelled || !mountRef.current) return;
             const w = mountRef.current.clientWidth || window.innerWidth;
             const h = mountRef.current.clientHeight || window.innerHeight;
 
@@ -115,7 +117,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                         }
                     });
 
-                    
+
                     scene.add(object);
                     if (object.animations?.length) {
                         const mixer = new THREE.AnimationMixer(object);
@@ -173,7 +175,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                         exit={{ scale: 0.85, opacity: 0 }}
                         transition={{ type: "spring", damping: 22, stiffness: 260 }}
                         className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-cyan-300/30 bg-black shadow-[0_0_80px_rgba(34,211,238,.25)]"
-                        style={{ aspectRatio: "16/9" }}
+                        style={{ aspectRatio: "16/9", maxHeight: "90vh", width: "95vw" }}
                     >
                         <video
                             ref={videoRef}

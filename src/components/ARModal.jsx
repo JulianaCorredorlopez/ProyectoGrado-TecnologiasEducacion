@@ -216,9 +216,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                             ✕
                         </button>
 
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-cyan-400/30 bg-black/50 px-4 py-1.5 backdrop-blur-sm">
-                            <span className="text-xs font-mono text-cyan-200">TECSI · Semillero de Investigación</span>
-                        </div>
+                        
                     </motion.div>
                 </motion.div>
             )}

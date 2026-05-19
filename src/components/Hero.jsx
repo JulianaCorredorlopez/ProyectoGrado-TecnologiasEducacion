@@ -36,7 +36,9 @@ export default function Hero() {
             </a>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <h1>Presiona el avatar para vivir una experiencia inmersiva de RA</h1>
+            <h1 className="title-glow max-w-4xl text-xl font-black leading-tight tracking-tight md:text-5xl">
+              Presiona el avatar para vivir una experiencia inmersiva de RA
+          </h1>
           </div>
         </div>
 

@@ -270,7 +270,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                         exit={{ scale: 0.95, opacity: 0 }}
                         transition={{ type: "spring", damping: 22, stiffness: 260 }}
                         className="relative w-full max-w-2xl  overflow-hidden rounded-[2rem] border border-cyan-300/30 bg-black shadow-[0_0_80px_rgba(34,211,238,.25)]"
-                        style={{ aspectRatio: "16/9", maxHeight: "170vh", width: "95vw" }}
+                        style={{ aspectRatio: "16/9", maxHeight: "180vh", width: "95vw" }}
                     >
                         {/* Feed de cámara */}
                         <video

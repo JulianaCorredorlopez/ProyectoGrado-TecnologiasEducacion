@@ -24,9 +24,9 @@ export default function Hero() {
             Portafolio de actividades de semillero
           </Badge>
 
-          <h1 className="title-glow max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-6xl">
-            TECSI: tecnología, investigación y educación
-          </h1>
+          <h3 className="title-glow max-w-4xl text-xl font-black leading-tight tracking-tight md:text-5xl">
+              Desarrollo e investigación de tecnologías basadas en realidad aumentada e inteligencia artificial enfocado a la educación
+          </h3>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#recorrido">
@@ -35,11 +35,6 @@ export default function Hero() {
               </Button>
             </a>
 
-            <a href="#evidencias">
-              <Button className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-white hover:bg-white/10">
-                Ver evidencias <Icons.Play className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
           </div>
         </div>
 

@@ -24,10 +24,10 @@ import logoDos from "../assets/logoDos.png";
 // ─────────────────────────────────────────────────────────────────
 
 export const kpis = [
-  { label: "Instituciones impactadas", value: "12+",     icon: Icons.School },
-  { label: "Estudiantes estimados",    value: "250-300", icon: Icons.Users  },
-  { label: "Actividades académicas",   value: "15+",     icon: Icons.Play   },
-  { label: "Productos y desarrollos",  value: "6+",      icon: Icons.Layers },
+  { label: "Instituciones impactadas", value: "12+", icon: Icons.School },
+  { label: "Estudiantes estimados", value: "250-300", icon: Icons.Users },
+  { label: "Actividades académicas", value: "15+", icon: Icons.Play },
+  { label: "Productos y desarrollos", value: "6+", icon: Icons.Layers },
 ];
 
 export const years = [
@@ -78,11 +78,22 @@ export const eventsByCategory = {
 
   "Póster": [
     {
-      id: "poster-1", type: "Póster", title: "I Encuentro de Semilleros", date: "2022",
-      description: "Presentación del primer póster en el I Encuentro de Semilleros. Primer paso en la trayectoria investigativa del grupo.",
-      highlights: ["Primer póster", "Inicio del semillero", "Divulgación académica"],
-      image: null, media: [],
+      id: "poster-1",
+      type: "Póster",
+      title: "I Encuentro de Semilleros",
+      date: "2022",
+      description:
+        "Presentación del primer póster en el I Encuentro de Semilleros - Sistema de información Granjas Cunícolas",
+      highlights: [
+        "Primer póster",
+        "Investigación con sensores y tecnología",
+        "Divulgación académica",
+      ],
+      image: "/images/Semillero2022.png", media: [
+        { type: "image", src: "/images/IEncuentroSemilleros.jpeg", caption: "Póster CyberTech Women 2024" },
+      ],
     },
+
     {
       id: "poster-2", type: "Póster", title: "CyberTech Women", date: "2024",
       description: "Presentación de póster en el evento CyberTech Women 2024.",
@@ -185,7 +196,7 @@ export const eventsByCategory = {
       highlights: ["CyberTech Women", "UNAD", "NeuroInfo"],
       image: null, media: [
         { type: "youtube", src: null, caption: "Video CyberTech" },
-        { type: "image",   src: null, caption: "Presentación" },
+        { type: "image", src: null, caption: "Presentación" },
       ],
     },
     {
@@ -203,8 +214,8 @@ export const eventsByCategory = {
       highlights: ["App móvil", "Neurociencia + RA", "Aprendizaje interactivo"],
       image: null, media: [
         { type: "youtube", src: null, caption: "Demo NeuroInfo" },
-        { type: "image",   src: null, caption: "Pantallas de la app" },
-        { type: "image",   src: null, caption: "Póster ENIIU" },
+        { type: "image", src: null, caption: "Pantallas de la app" },
+        { type: "image", src: null, caption: "Póster ENIIU" },
       ],
     },
     {
@@ -272,25 +283,25 @@ export const eventsByCategory = {
         { type: "image", src: null, caption: "Interfaz gamificación" },
       ],
     },
-    
+
   ],
 };
 
 export const mapPoints = [
-  { name: "Tunja",          note: "Universidad, Comfaboy, UPTC y eventos", x: "50%", y: "42%" },
-  { name: "Villa de Leyva", note: "Capacitación grado 10",                 x: "66%", y: "28%" },
-  { name: "Turmequé",       note: "VI Feria Universitaria",                x: "38%", y: "52%" },
-  { name: "Chiquinquirá",   note: "Capacitación RA + IA",                  x: "25%", y: "38%" },
-  { name: "Colegio Boyacá", note: "Capacitación grado 11",                 x: "62%", y: "60%" },
-  { name: "San Jerónimo",   note: "Codirección trabajos de grado",         x: "74%", y: "48%" },
+  { name: "Tunja", note: "Universidad, Comfaboy, UPTC y eventos", x: "50%", y: "42%" },
+  { name: "Villa de Leyva", note: "Capacitación grado 10", x: "66%", y: "28%" },
+  { name: "Turmequé", note: "VI Feria Universitaria", x: "38%", y: "52%" },
+  { name: "Chiquinquirá", note: "Capacitación RA + IA", x: "25%", y: "38%" },
+  { name: "Colegio Boyacá", note: "Capacitación grado 11", x: "62%", y: "60%" },
+  { name: "San Jerónimo", note: "Codirección trabajos de grado", x: "74%", y: "48%" },
 ];
 
 export const activityCounts = [
   { label: "Capacitaciones", value: 8 },
-  { label: "Ponencias",      value: 5 },
-  { label: "Pósteres",       value: 4 },
-  { label: "Desarrollos",    value: 3 },
-  { label: "Investigaciones",value: 2 },
+  { label: "Ponencias", value: 5 },
+  { label: "Pósteres", value: 4 },
+  { label: "Desarrollos", value: 3 },
+  { label: "Investigaciones", value: 2 },
 ];
 
 export const workItems = [
@@ -325,9 +336,9 @@ export const workItems = [
     result: "Propuesta de aplicación móvil que une neurociencia, realidad aumentada y aprendizaje interactivo.",
     media: [
       { type: "youtube", src: null, caption: "Demo NeuroInfo" },
-      { type: "image",   src: null, caption: "Pantallas de la app" },
-      { type: "image",   src: null, caption: "Póster ENIIU" },
-      { type: "image",   src: null, caption: "Presentación CyberTech" },
+      { type: "image", src: null, caption: "Pantallas de la app" },
+      { type: "image", src: null, caption: "Póster ENIIU" },
+      { type: "image", src: null, caption: "Presentación CyberTech" },
     ],
   },
   {

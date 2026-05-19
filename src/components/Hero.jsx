@@ -55,7 +55,7 @@ export default function Hero() {
                 transition={{ repeat: Infinity, duration: 3 }}
               />
 
-              <div className="absolute inset-0 flex items-center justify-center p-8">
+              <div className="absolute inset-0 flex items-center justify-center ">
                 <motion.button
                   whileHover={{ scale: 1.08, rotate: 2 }}
                   onHoverStart={() => setScanActive(true)}

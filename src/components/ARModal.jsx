@@ -42,7 +42,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
             let stream;
             try {
                 stream = await navigator.mediaDevices.getUserMedia({
-                    video: { facingMode: "environment", width: { ideal: 1280 }, height: { ideal: 720 } },
+                    video: { facingMode: "environment", width: { ideal: 1600}, height: { ideal: 1000 } },
                     audio: false,
                 });
             } catch {
@@ -265,9 +265,9 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                     onClick={(e) => e.target === e.currentTarget && onClose()}
                 >
                     <motion.div
-                        initial={{ scale: 0.85, opacity: 0 }}
+                        initial={{ scale: 0.95, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 0.85, opacity: 0 }}
+                        exit={{ scale: 0.95, opacity: 0 }}
                         transition={{ type: "spring", damping: 22, stiffness: 260 }}
                         className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-cyan-300/30 bg-black shadow-[0_0_80px_rgba(34,211,238,.25)]"
                         style={{ aspectRatio: "16/9", maxHeight: "90vh", width: "95vw" }}
@@ -320,7 +320,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
 
                         {/* Label inferior */}
                         <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 rounded-full border border-cyan-400/30 bg-black/50 px-4 py-1.5 backdrop-blur-sm">
-                            <span className="text-xs font-mono text-cyan-450">Ing Juliana Corredor Lopez/ Semillero TECSI</span>
+                            <span className="text-xs font-mono text-cyan-450">Ing Juliana Corredor Lopez</span>
                         </div>
                     </motion.div>
                 </motion.div>

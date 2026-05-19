@@ -50,7 +50,7 @@ export default function Hero() {
               />
 
               <motion.div
-                className="absolute left-8 right-8 top-8 h-1 rounded-full bg-cyan-300 shadow-[0_0_25px_rgba(34,211,238,.9)]"
+                className="absolute left-8 right-8 top-8 h-1 rounded-full bg-cyan-300 shadow-[0_0_25px_rgba(34,211,238,1)]"
                 animate={{ y: scanActive ? [0, 260, 0] : [0, 230, 0] }}
                 transition={{ repeat: Infinity, duration: 3 }}
               />
@@ -62,12 +62,12 @@ export default function Hero() {
                   onHoverEnd={() => setScanActive(false)}
                   onTap={() => setArOpen(true)}
                   onClick={() => setArOpen(true)}
-                  className="rounded-3xl border border-white/20 bg-white/10 p-7 text-center backdrop-blur-md"
+                  className="rounded-3xl border border-white/60 bg-white/30 p-7 text-center backdrop-blur-md"
                 >
                   <img
-                    src={logoDos}
+                    src="/images/juliing.png"
                     alt="Portal RA"
-                    className="mx-auto mb-4 h-50 w-50 object-contain"
+                    className="mx-auto mb-4 h-80 w-80 object-contain"
                   />
                 </motion.button>
               </div>

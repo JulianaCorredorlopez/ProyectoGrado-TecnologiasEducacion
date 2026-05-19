@@ -67,7 +67,7 @@ export default function Hero() {
                   <img
                     src="/images/juliing.png"
                     alt="Portal RA"
-                    className="mx-auto mb-4 h-70 w-70 object-contain"
+                    className="mx-auto mb-4 h-70 w-50 object-contain"
                   />
                 </motion.button>
               </div>

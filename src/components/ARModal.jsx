@@ -320,7 +320,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
 
                         {/* Label inferior */}
                         <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 rounded-full border border-cyan-400/30 bg-black/50 px-4 py-1.5 backdrop-blur-sm">
-                            <span className="text-xs font-mono text-cyan-200">Ing Juliana Corredor Lopez/ Semillero TECSI</span>
+                            <span className="text-xs font-mono text-cyan-450">Ing Juliana Corredor Lopez/ Semillero TECSI</span>
                         </div>
                     </motion.div>
                 </motion.div>

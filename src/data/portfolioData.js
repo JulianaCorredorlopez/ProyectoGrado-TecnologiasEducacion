@@ -43,7 +43,7 @@ export const eventsByCategory = {
       date: "2022",
       description:
         "Presentación del primer póster en el I Encuentro de Semilleros - Sistema de información Granjas Cunícolas",
-    
+
       image: "/images/Semillero2022.png", media: [
         { type: "image", src: "/images/IEncuentroSemilleros.jpeg", caption: "Póster CyberTech Women 2024" },
       ],
@@ -70,7 +70,9 @@ export const eventsByCategory = {
     {
       id: "poster-4", type: "Póster", title: "CyberTech Women-RA y IA En la educación Veterinaria", date: "2026",
       description: "Presentación de póster en el evento CyberTech Women 2026/ Realidad Aumentada E Inteligencia Artificial En La Educación Veterinaria: Una Revisión Sistemática De Enfoques De Aprendizaje Interactivo ",
-      image: "/images/cyber2026.png", media: [],
+      image: "/images/cyber2026.png", media: [
+        { type: "youtube", src: "https://youtu.be/756tzAlCJrM" },
+      ],
     },
   ],
 
@@ -99,29 +101,44 @@ export const eventsByCategory = {
     {
       id: "cap-4", type: "Capacitación", title: "Taller RA — Instituto Técnico Gonzalo Suárez Rendón", date: "2024",
       description: "Capacitación de realidad aumentada en el Instituto Técnico Gonzalo Suárez Rendón.",
-      image: null, media: [{ type: "image", src: null, caption: "Actividad ITGSR" }],
+      image: "/images/Gonzalo1.jpeg", media: [
+        { type: "image", src: "/images/Gonzalo2.jpeg", caption: "Actividad ITGSR" },
+        { type: "image", src: "/images/gonzalo3.jpeg", caption: "Actividad ITGSR" },
+        { type: "image", src: "/images/gonzalo4.jpeg", caption: "Actividad ITGSR" }],
     },
     {
       id: "cap-5", type: "Capacitación", title: "Taller RA — Colegio Boyacá", date: "2024",
       description: "Capacitación de realidad aumentada con estudiantes del Colegio Boyacá.",
-      image: null, media: [{ type: "image", src: null, caption: "Estudiantes Colegio Boyacá" }],
+      image: "/images/boyaca1.jpeg", media: [
+        { type: "image", src: "/images/boyaca3.png", caption: "Estudiantes Colegio Boyacá" },
+        { type: "image", src: "/images/boyaca2.jpeg", caption: "Estudiantes Colegio Boyacá" }],
     },
     {
       id: "cap-6", type: "Capacitación", title: "Taller RA — Colegio Villa de Leyva", date: "2025",
       description: "Capacitación dirigida a estudiantes en Villa de Leyva, incorporando experiencias inmersivas con RA.",
-      image: null, media: [{ type: "image", src: null, caption: "Taller Villa de Leyva" }],
+      image: "/images/villa1.jpeg", media: [
+        { type: "image", src: "/images/villa2.jpeg", caption: "Taller Villa de Leyva" },
+        { type: "image", src: "/images/villa3.jpeg", caption: "Taller Villa de Leyva" },
+        { type: "image", src: "/images/villa4.jpeg", caption: "Taller Villa de Leyva" },
+        { type: "image", src: "/images/villa5.jpeg", caption: "Taller Villa de Leyva" }],
     },
     {
       id: "cap-7", type: "Capacitación", title: "Taller RA — Colegio Diego Torres Turmequé", date: "2025",
       description: "Capacitación con estudiantes del Colegio Diego Torres en Turmequé.",
-      image: null, media: [{ type: "image", src: null, caption: "Taller Turmequé" }],
+      image: "/images/turmeque1.jpeg", media: [
+        { type: "image", src: "/images/turmeque2.jpeg", caption: "Taller Turmequé" },
+        { type: "image", src: "/images/turmeque3.jpeg", caption: "Taller Turmequé" },
+        { type: "image", src: "/images/turmeque4.jpeg", caption: "Taller Turmequé" },
+        { type: "image", src: "/images/turmeque5.jpeg", caption: "Taller Turmequé" },
+        { type: "image", src: "/images/turmeque6.jpeg", caption: "Taller Turmequé" }],
     },
     {
       id: "cap-8", type: "Capacitación", title: "Taller RA + IA — Colegio Chiquinquirá", date: "2025",
       description: "Primera integración formal de inteligencia artificial en los talleres de realidad aumentada, en Chiquinquirá.",
-      image: null, media: [
-        { type: "video", src: null, caption: "Video capacitación" },
-        { type: "image", src: null, caption: "Actividad con estudiantes" },
+      image: "/images/chiquin1.jpeg", media: [
+        { type: "video", src: "/images/chiquin2.mp4", caption: "Video capacitación" },
+        { type: "image", src: "/images/chiquin3.jpeg", caption: "Actividad con estudiantes" },
+        { type: "image", src: "/images/chiquin4.jpeg", caption: "Actividad con estudiantes" },
       ],
     },
   ],
@@ -130,26 +147,33 @@ export const eventsByCategory = {
     {
       id: "pon-1", type: "Ponencia", title: "Tercer Simposio Tejiendo Humanidad", date: "2023",
       description: "Participación en el Tercer Simposio Tejiendo Humanidad con presentación de avances del semillero.",
-      image: null, media: [],
+      image: "/images/simposio.jpeg", media: [
+        { type: "image", src: "/images/SimposioTejiendoHumanidades.png", caption: "Certificado" },
+      ],
     },
     {
       id: "pon-2", type: "Ponencia", title: "ENIIU — Encuentro Nacional de Investigación", date: "2024",
       description: "Participación en el Encuentro Nacional de Investigación e Innovación Universitaria con póster y presentación oral.",
       highlights: ["ENIIU", "Investigación", "Póster académico"],
-      image: null, media: [{ type: "image", src: null, caption: "Póster ENIIU" }],
+      image: "/images/eniiu.png", media: [{ type: "image", src: "/images/eniiu2.png", caption: "Póster ENIIU" }],
     },
     {
       id: "pon-3", type: "Ponencia", title: "CyberTech Women — UNAD", date: "2024",
       description: "Presentación de NeuroInfo en el evento CyberTech Women de la UNAD. Primer reconocimiento externo del proyecto.",
-      image: null, media: [
-        { type: "youtube", src: null, caption: "Video CyberTech" },
-        { type: "image", src: null, caption: "Presentación" },
+      image: "/images/cyber2024.jpeg", media: [
+        { type: "youtube", src: "https://youtu.be/oMs7rtUqJsg?t=31831", caption: "Video CyberTech" },
       ],
     },
     {
       id: "pon-4", type: "Ponencia", title: "Metodologías activas — RA para actividad física y deporte", date: "2025",
       description: "Ponencia sobre el uso de la realidad aumentada en metodologías activas en educación física y deportes.",
-      image: null, media: [],
+      image: "/images/deporte1.jpeg", media: [
+        { type: "image", src: "/images/deporte2.jpeg", caption: "Actividad con estudiantes" },
+        { type: "video", src: "/images/deporte4.mp4", caption: "Video capacitación" },
+        { type: "video", src: "/images/deporte3.mp4", caption: "Video capacitación" },
+        { type: "image", src: "/images/deporte5.jpeg", caption: "Actividad con estudiantes" },
+        { type: "image", src: "/images/deporte6.jpeg", caption: "Actividad con estudiantes" },
+      ],
     },
   ],
 
@@ -157,16 +181,14 @@ export const eventsByCategory = {
     {
       id: "inv-1", type: "Investigación", title: "NeuroInfo", date: "2024",
       description: "Propuesta de aplicación móvil que une neurociencia, realidad aumentada y aprendizaje interactivo. Presentada en múltiples eventos académicos.",
-      image: null, media: [
-        { type: "youtube", src: null, caption: "Demo NeuroInfo" },
-        { type: "image", src: null, caption: "Pantallas de la app" },
-        { type: "image", src: null, caption: "Póster ENIIU" },
+      image: "/images/Neuroinfo.png", media: [
+
       ],
     },
     {
       id: "inv-2", type: "Investigación", title: "Revisión sistemática — RA e IA en educación veterinaria", date: "2026",
       description: "Artículo de revisión sistemática sobre el potencial de la RA e IA para el aprendizaje interactivo en educación veterinaria.",
-      image: null, media: [{ type: "image", src: null, caption: "Portada del artículo" }],
+      image: "/images/ravet.png", media: [],
     },
   ],
 
@@ -174,32 +196,32 @@ export const eventsByCategory = {
     {
       id: "codir-1", type: "Codirección", title: "Co-directora de trabajos de grado — San Jerónimo Emiliani", date: "2024",
       description: "Co-directora de trabajos de grado en modalidades técnicas de la institución San Jerónimo Emiliani.",
-      image: null, media: [],
-    },
-  ],
-
-  "Talleres": [
-    {
-      id: "taller-1", type: "Taller", title: "Evento eSports — Taller RA y RV", date: "2025",
-      description: "Participación en evento de eSports con taller de realidad aumentada y realidad virtual.",
-      image: null, media: [
-        { type: "video", src: null, caption: "Video taller eSports" },
-        { type: "image", src: null, caption: "Actividad RA y RV" },
+      image: "/images/emiliani1.png", media: [
+        { type: "image", src: "/images/emiliani2.jpeg", caption: "Actividad con estudiantes" },
+        { type: "image", src: "/images/emiliani3.png", caption: "Actividad con estudiantes" },
       ],
     },
   ],
 
+
+
   "Participaciones": [
     {
-      id: "part-1", type: "Participación", title: "Charla — Introducción a la Ingeniería de Sistemas", date: "2023",
-      description: "Charla introductoria sobre Ingeniería de Sistemas dirigida a estudiantes interesados en la carrera.",
-      image: null, media: [],
+      id: "part-1",
+      type: "Participación",
+      title: "Monitora Semillero TECSI",
+      date: "Semestre 2023-2 al Semestre 2024-2",
+      description:
+        "Participación como monitora del semillero TECSI durante tres semestres, apoyando la organización, representación y desarrollo de actividades, capacitaciones y proyectos del semillero.",
+      image: "/images/turmeque3.jpeg",
+      media: [],
     },
     {
       id: "part-2", type: "Participación", title: "Aplicación RA — Inauguración Doctorado en TI", date: "2025",
       description: "Demostración de aplicación de realidad aumentada en la inauguración del Doctorado en Tecnologías de la Información.",
-      image: null, media: [
-        { type: "image", src: null, caption: "Demostración RA doctorado" },
+      image: "/images/doctora3.png", media: [
+        { type: "video", src: "/images/doctora1.mov", caption: "Demostración RA doctorado" },
+        { type: "image", src: "/images/doctora2.png", caption: "Demostración RA doctorado" },
       ],
     },
   ],

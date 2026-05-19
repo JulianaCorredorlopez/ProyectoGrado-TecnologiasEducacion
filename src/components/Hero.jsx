@@ -62,7 +62,7 @@ export default function Hero() {
                   onHoverEnd={() => setScanActive(false)}
                   onTap={() => setArOpen(true)}
                   onClick={() => setArOpen(true)}
-                  className="rounded-3xl border border-white/60 bg-white/30 p-4 text-center backdrop-blur-md"
+                  className="rounded-3xl border border-white/60 bg-white/30  text-center backdrop-blur-md"
                 >
                   <img
                     src="/images/juliing.png"

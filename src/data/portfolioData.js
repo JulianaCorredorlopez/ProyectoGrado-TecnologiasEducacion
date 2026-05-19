@@ -143,7 +143,7 @@ export const eventsByCategory = {
     },
   ],
 
-  "Participaciones / Ponencias": [
+  "Ponencias": [
     {
       id: "pon-1", type: "Ponencia", title: "Tercer Simposio Tejiendo Humanidad", date: "2023",
       description: "Participación en el Tercer Simposio Tejiendo Humanidad con presentación de avances del semillero.",
@@ -230,17 +230,19 @@ export const eventsByCategory = {
     {
       id: "prod-1", type: "Producto", title: "Plataforma Gestión de Egresados", date: "2024",
       description: "Desarrollo de plataforma web para la gestión y seguimiento de egresados de la institución.",
-      image: null, media: [
-        { type: "image", src: null, caption: "Interfaz plataforma" },
+      image: "images/egresados1.jpeg", media: [
+        { type: "video", src: "images/egresados.mp4", caption: "Video Plataforma" },
+        { type: "image", src:"images/egresados2.jpeg", caption: "Evidencias" },
+        { type: "image", src:"images/egresados3.jpeg", caption: "evidencias" },
+        { type: "image", src:"images/egresados4.jpeg", caption: "evidencias" },
       ],
     },
     {
       id: "prod-2", type: "Producto", title: "Alto Chicamocha RA — Gamificación e Inmersión", date: "2025",
       description: "Aplicación móvil funcional para comprender sistemas de energías renovables mediante realidad aumentada y gamificación.",
-      image: null, media: [
-        { type: "video", src: "/videos/videoJuego.mp4", caption: "Demo Alto Chicamocha" },
-        { type: "image", src: null, caption: "Interfaz de la app" },
-        { type: "image", src: null, caption: "Interfaz gamificación" },
+      image: "/images/EvidenciaUno.jpeg", media: [
+        { type: "video", src: "/images/chicamocha1.mp4", caption: "Demo Alto Chicamocha" },
+       { type: "video", src: "/images/graficasChica.mp4", caption: "Demo Alto Chicamocha" },
       ],
     },
 

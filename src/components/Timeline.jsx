@@ -24,8 +24,8 @@ const categoryConfig = {
     color: "#39B54A", bg: "rgba(57,181,74,0.12)", label: "Capacitaciones",
     image: "/images/villa1.jpeg",
   },
-  "Participaciones / Ponencias": {
-    color: "#F7931E", bg: "rgba(247,147,30,0.12)",label: "Participaciones / Ponencias",
+  "Ponencias": {
+    color: "#F7931E", bg: "rgba(247,147,30,0.12)",label: "Ponencias",
     image: "/images/eniiu.png",
   },
   "Investigaciones": {
@@ -36,17 +36,14 @@ const categoryConfig = {
     color: "#F9A63A", bg: "rgba(249,166,58,0.12)", label: "Codirección",
     image: "/images/emiliani2.jpeg",
   },
-  "Talleres": {
-    color: "#FF6B6B", bg: "rgba(255,107,107,0.12)", label: "Talleres",
-    image: "/images/categorias/talleres.jpg",
-  },
+
   "Participaciones": {
     color: "#4ECDC4", bg: "rgba(78,205,196,0.12)" ,label: "Participaciones",
-    image: "/images/categorias/participaciones.jpg",
+    image: "/images/participacionesDoctorado.jpeg",
   },
   "Productos": {
     color: "#F7931E", bg: "rgba(247,147,30,0.12)", label: "Productos",
-    image: "/images/categorias/productos.jpg",
+    image: "/images/egresados1.jpeg",
   },
 };
 

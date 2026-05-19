@@ -520,14 +520,7 @@ function Drawer({ event, onClose }) {
             {event.description}
           </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 24 }}>
-            {event.highlights.map((h) => (
-              <span key={h} style={{
-                padding: "5px 14px", borderRadius: 99, fontSize: 13,
-                border: `1px solid ${cfg.color}44`, background: cfg.bg, color: cfg.color,
-              }}>{h}</span>
-            ))}
-          </div>
+      
 
           {event.media && event.media.length > 0 && (
             <MediaCarousel

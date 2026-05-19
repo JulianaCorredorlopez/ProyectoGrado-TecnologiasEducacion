@@ -12,6 +12,9 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
     const sceneRef = useRef(null);
     const mixerRef = useRef(null);
     const clockRef = useRef(null);
+    const zoomRef = useRef(1); // zoom actual
+    const rotRef = useRef(0); // rotación Y acumulada
+    const dragRef = useRef(null); // estado de arrastre
 
     const cleanup = useCallback(() => {
         cancelAnimationFrame(animFrameRef.current);
@@ -163,11 +166,76 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                 animFrameRef.current = requestAnimationFrame(animate);
                 const delta = clock.getDelta();
                 mixerRef.current?.update(delta);
-                scene.rotation.y += 0.004;
+                scene.rotation.y = rotRef.current;
                 scene.position.y = Math.sin(Date.now() * 0.0015) * 3;
+                scene.scale.setScalar(zoomRef.current);
                 renderer.render(scene, camera);
             }
             animate();
+            const el = mountRef.current;
+
+            // ── TOUCH ────────────────────────────────
+            let lastDist = null;
+
+            function onTouchStart(e) {
+                if (e.touches.length === 1) {
+                    dragRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                }
+                if (e.touches.length === 2) {
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    lastDist = Math.hypot(dx, dy);
+                }
+            }
+            function onTouchMove(e) {
+                e.preventDefault();
+                if (e.touches.length === 1 && dragRef.current) {
+                    const dx = e.touches[0].clientX - dragRef.current.x;
+                    rotRef.current += dx * 0.01;
+                    dragRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                }
+                if (e.touches.length === 2 && lastDist !== null) {
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    const dist = Math.hypot(dx, dy);
+                    zoomRef.current = Math.min(3, Math.max(0.3, zoomRef.current * (dist / lastDist)));
+                    lastDist = dist;
+                }
+            }
+            function onTouchEnd() {
+                dragRef.current = null;
+                lastDist = null;
+            }
+            // ── MOUSE (desktop) ──────────────────────
+            function onMouseDown(e) {
+                dragRef.current = { x: e.clientX };
+            }
+            function onMouseMove(e) {
+                if (!dragRef.current) return;
+                rotRef.current += (e.clientX - dragRef.current.x) * 0.01;
+                dragRef.current = { x: e.clientX };
+            }
+            function onMouseUp() { dragRef.current = null; }
+            function onWheel(e) {
+                e.preventDefault();
+                zoomRef.current = Math.min(3, Math.max(0.3, zoomRef.current - e.deltaY * 0.001));
+            }
+            el.addEventListener("touchstart", onTouchStart, { passive: false });
+            el.addEventListener("touchmove", onTouchMove, { passive: false });
+            el.addEventListener("touchend", onTouchEnd);
+            el.addEventListener("mousedown", onMouseDown);
+            window.addEventListener("mousemove", onMouseMove);
+            window.addEventListener("mouseup", onMouseUp);
+            el.addEventListener("wheel", onWheel, { passive: false });
+            return () => {
+                el.removeEventListener("touchstart", onTouchStart);
+                el.removeEventListener("touchmove", onTouchMove);
+                el.removeEventListener("touchend", onTouchEnd);
+                el.removeEventListener("mousedown", onMouseDown);
+                window.removeEventListener("mousemove", onMouseMove);
+                window.removeEventListener("mouseup", onMouseUp);
+                el.removeEventListener("wheel", onWheel);
+            }
 
             const onResize = () => {
                 if (!mountRef.current || !rendererRef.current) return;
@@ -233,7 +301,7 @@ export default function ARModal({ isOpen, onClose, modelUrl = "/models/avatarJul
                         ))}
 
                         {/* Canvas Three.js */}
-                        <div ref={mountRef} className="absolute inset-0 bottom-12" style={{ pointerEvents: "none" }} />
+                        <div ref={mountRef} className="absolute inset-0 bottom-12" style={{ pointerEvents: "auto", cursor: "grab" }} />
 
                         {/* Badge AR LIVE */}
                         <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-cyan-400/40 bg-black/50 px-3 py-1 backdrop-blur-sm">

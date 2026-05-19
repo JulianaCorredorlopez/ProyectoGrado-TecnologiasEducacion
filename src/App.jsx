@@ -26,7 +26,7 @@ export default function App() {
       <Header />
       <main className="pt-17">
         <Hero />
-        <section className="relative mx-auto max-w-7xl px-6 py-16 pt-17">
+        <section className="relative mx-auto max-w-7xl px-6 py-16 pt-10">
           <SectionTitle eyebrow="Metodología" title="Desarrollo del trabajo realizado">
             Este proceso nos permitió desarrollar experiencias educativas basadas en RA e IA a través de un ciclo iterativo de investigación, diseño, aplicación, divulgación y evaluación.
           </SectionTitle>

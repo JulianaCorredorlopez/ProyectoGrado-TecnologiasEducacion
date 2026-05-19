@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   BarChart,
   Bar,
@@ -35,39 +34,46 @@ const COLORS = ["#2F73B8", "#C53532", "#8DBB3A"];
 
 export default function Charts() {
   return (
-    <section className="relative mx-auto max-w-7xl px-6 py-16">
+    <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
       <SectionTitle eyebrow="Resultados visuales" title="Gráficas de impacto">
         Resumen visual del alcance del trabajo realizado.
       </SectionTitle>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card className="rounded-[2rem] border border-cyan-300/20 bg-slate-900/80 backdrop-blur-lg">
-          <CardContent className="p-7">
-            <h3 className="mb-2 text-2xl font-black text-white">
+        <Card className="rounded-[1.5rem] border border-cyan-300/20 bg-slate-900/80 backdrop-blur-lg sm:rounded-[2rem]">
+          <CardContent className="p-4 sm:p-7">
+            <h3 className="mb-2 text-xl font-black text-white sm:text-2xl">
               Promedio de estudiantes por colegio
             </h3>
 
-            <p className="mb-6 text-sm text-slate-300">
+            <p className="mb-5 text-sm text-slate-300">
               Estudiantes impactados en instituciones educativas.
             </p>
 
-            <div className="h-[430px] rounded-3xl border border-white/10 bg-white/5 p-4">
+            <div className="h-[430px] rounded-3xl border border-white/10 bg-white/5 p-3 sm:h-[430px] sm:p-4">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={estudiantesPorColegio}>
+                <BarChart
+                  data={estudiantesPorColegio}
+                  layout="vertical"
+                  margin={{ top: 10, right: 20, left: 10, bottom: 10 }}
+                >
                   <CartesianGrid strokeDasharray="3 3" stroke="#ffffff20" />
                   <XAxis
-                    dataKey="colegio"
-                    tick={{ fontSize: 10, fill: "#ffffff" }}
-                    angle={-35}
-                    textAnchor="end"
-                    height={120}
+                    type="number"
+                    tick={{ fontSize: 11, fill: "#ffffff" }}
+                    domain={[0, 35]}
                   />
-                  <YAxis tick={{ fill: "#ffffff" }} />
+                  <YAxis
+                    type="category"
+                    dataKey="colegio"
+                    width={120}
+                    tick={{ fontSize: 10, fill: "#ffffff" }}
+                  />
                   <Tooltip />
                   <Bar
                     dataKey="promedio"
                     fill="#22d3ee"
-                    radius={[10, 10, 0, 0]}
+                    radius={[0, 10, 10, 0]}
                   />
                 </BarChart>
               </ResponsiveContainer>
@@ -75,26 +81,27 @@ export default function Charts() {
           </CardContent>
         </Card>
 
-        <Card className="rounded-[2rem] border border-cyan-300/20 bg-slate-900/80 backdrop-blur-lg">
-          <CardContent className="p-7">
-            <h3 className="mb-2 text-2xl font-black text-white">
+        <Card className="rounded-[1.5rem] border border-cyan-300/20 bg-slate-900/80 backdrop-blur-lg sm:rounded-[2rem]">
+          <CardContent className="p-4 sm:p-7">
+            <h3 className="mb-2 text-xl font-black text-white sm:text-2xl">
               Distribución del impacto por año
             </h3>
 
-            <p className="mb-6 text-sm text-slate-300">
+            <p className="mb-5 text-sm text-slate-300">
               Comparación porcentual del impacto entre los años trabajados.
             </p>
 
-            <div className="h-[430px] rounded-3xl border border-white/10 bg-white/5 p-4">
+            <div className="h-[330px] rounded-3xl border border-white/10 bg-white/5 p-3 sm:h-[430px] sm:p-4">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={impactoPorAnio}
                     cx="50%"
-                    cy="45%"
-                    outerRadius={120}
+                    cy="42%"
+                    outerRadius="65%"
                     dataKey="value"
                     label={({ name, value }) => `${name}: ${value}%`}
+                    labelLine={false}
                   >
                     {impactoPorAnio.map((entry, index) => (
                       <Cell key={entry.name} fill={COLORS[index]} />
@@ -102,7 +109,10 @@ export default function Charts() {
                   </Pie>
 
                   <Tooltip formatter={(value) => `${value}%`} />
-                  <Legend />
+                  <Legend
+                    verticalAlign="bottom"
+                    wrapperStyle={{ fontSize: "12px" }}
+                  />
                 </PieChart>
               </ResponsiveContainer>
             </div>

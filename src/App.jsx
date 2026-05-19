@@ -24,7 +24,7 @@ export default function App() {
       </div>
 
       <Header />
-      <main className="pt-17">
+      <main className="pt-10">
         <Hero />
         <section className="relative mx-auto max-w-7xl px-6 py-16">
           <SectionTitle eyebrow="Metodología" title="Desarrollo del trabajo realizado">

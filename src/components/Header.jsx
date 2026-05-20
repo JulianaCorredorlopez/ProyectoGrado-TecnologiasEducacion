@@ -28,7 +28,7 @@ export default function Header() {
           {/* Textos */}
           <div>
             <h1 className="text-xl font-black text-white md:text-2xl">
-              Semillero RA & IA
+              Semillero TECSI/ RA & IA
             </h1>
 
             <p className="text-sm text-[#7eb8f7]">

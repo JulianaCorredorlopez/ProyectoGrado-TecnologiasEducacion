@@ -24,10 +24,10 @@ import logoDos from "../assets/logoDos.png";
 // ─────────────────────────────────────────────────────────────────
 
 export const kpis = [
-  { label: "Instituciones impactadas", value: "12+", icon: Icons.School },
+  { label: "Instituciones impactadas", value: "8+", icon: Icons.School },
   { label: "Estudiantes estimados", value: "250-300", icon: Icons.Users },
-  { label: "Actividades académicas", value: "15+", icon: Icons.Play },
-  { label: "Productos y desarrollos", value: "6+", icon: Icons.Layers },
+  { label: "Actividades académicas", value: "18+", icon: Icons.Play },
+  { label: "Productos y desarrollos", value: "2+", icon: Icons.Layers },
 ];
 
 
@@ -62,6 +62,7 @@ export const eventsByCategory = {
       image: "/images/encuentrosemillerosPoster.png",
       media: [
         { type: "image", src: "/images/EvidenciaUno.jpeg", caption: "Póster CHICAMOCHA V 2025" },
+        { type: "video", src: "/images/videoEvidencia.mp4", caption: "Video Evidencia" },
         { type: "image", src: "/images/EvidenciaSeis.jpeg", caption: "Póster CHICAMOCHA V 2025" },
         { type: "image", src: "/images/EvidenciaCincoAlto.jpeg", caption: "Póster CHICAMOCHA V 2025" },
         { type: "image", src: "/images/EvidenciaTresAlto.jpeg", caption: "Póster CHICAMOCHA V 2025" },
@@ -111,6 +112,8 @@ export const eventsByCategory = {
       description: "Capacitación de realidad aumentada con estudiantes del Colegio Boyacá.",
       image: "/images/boyaca1.jpeg", media: [
         { type: "image", src: "/images/boyaca3.png", caption: "Estudiantes Colegio Boyacá" },
+        { type: "video", src: "/images/BoyacaVideo.mp4", caption: "Video Capacitación" },
+        { type: "image", src: "/images/boyaca4.jpeg", caption: "Estudiantes Colegio Boyacá" },
         { type: "image", src: "/images/boyaca2.jpeg", caption: "Estudiantes Colegio Boyacá" }],
     },
     {

@@ -25,7 +25,7 @@ export default function Hero() {
           </Badge>
 
           <h3 className="title-glow max-w-4xl text-xl font-black leading-tight tracking-tight md:text-5xl">
-              Desarrollo e investigación de tecnologías basadas en realidad aumentada e inteligencia artificial enfocado a la educación
+            Desarrollo e investigación de tecnologías basadas en realidad aumentada e inteligencia artificial enfocado a la educación
           </h3>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <h1 className=" text-center title-glow max-w-4xl text-xl font-black leading-tight tracking-tight md:text-5xl items-center justify-center">
               Presiona el avatar para vivir una experiencia inmersiva de RA
-          </h1>
+            </h1>
           </div>
         </div>
 
@@ -59,20 +59,33 @@ export default function Hero() {
                 transition={{ repeat: Infinity, duration: 3 }}
               />
 
-              <div className="absolute inset-0 flex items-center justify-center ">
+              <div className="absolute inset-0 flex items-center justify-center">
                 <motion.button
                   whileHover={{ scale: 1.08, rotate: 2 }}
                   onHoverStart={() => setScanActive(true)}
                   onHoverEnd={() => setScanActive(false)}
-                  onTap={() => setArOpen(true)}
                   onClick={() => setArOpen(true)}
-                  className="rounded-3xl border border-white/60 bg-white/30  text-center backdrop-blur-md"
+                  className="relative rounded-3xl border border-white/60 bg-white/30 text-center backdrop-blur-md"
                 >
+                  {/* Badge flotante */}
+                  <motion.span
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-cyan-400 px-3 py-1 text-xs font-bold text-slate-900 shadow-lg"
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                  >
+                    ✦ Ver en Realidad Aumentada
+                  </motion.span>
+
                   <img
                     src="/images/juliing.png"
-                    alt="Portal RA"
+                    alt="Abrir experiencia de Realidad Aumentada"
                     className="mx-auto mb-4 h-70 w-50 object-contain"
                   />
+
+                  {/* Texto debajo */}
+                  <p className="pb-2 text-xs font-semibold text-cyan-300 animate-pulse">
+                    👆 Toca para explorar
+                  </p>
                 </motion.button>
               </div>
             </div>
